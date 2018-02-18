@@ -5,28 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>GreenLight</title>
+    <title>GreenLight | Homepage</title>
 
     <!--jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Alike+Angular|Asul|Eczar" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <!--css file-->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/icon.css">
+    
+    <!--link rel="stylesheet" href="./css/main.css"-->
 
 </head>
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    
+    body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    }
+    p {
+        color: white;
+        font-family: "Snell Roundhand", cursive;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('relationship.jpg');
+        min-height: 100%;
+    }
+
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+
+</style>
+
+
+
 <body>
 
-     <h1>GreenLight</h1>
-        <p>Does your crush like you? Upload a txt file and see!</p>
-        <a href="/results"><button>Upload</button></a>
 
-        <div class="file-upload">
-                  <form method=post enctype=multipart/form-data>
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <!-- header -->
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> Green Light</span>
+            <p> Does your crush like you? </p>
+            <p> Upload a txt file and see!</p>
 
-                  <input type="file" name=file>
-                  <input type="submit" value="UPLOAD" class="btn draw-border">
+            <!-- upload button -->
+
+            <div class="file-upload">
+                <form method=post enctype=multipart/form-data>
+                <input type="file" name=file>
+                <input type="submit" value="UPLOAD" class="btn draw-border">
                 </form>
+            </div>
         </div>
+
+    </div>
+
+
+   
+
 </body>
 
 </html>
