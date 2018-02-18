@@ -5,25 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>fireMessage</title>
-
-    <!--Go to https://console.firebase.google.com-->
-    <!--Sign in and add a project "fireMessage"-->
-    <!--PASTE SNIPPET HERE-->
-
-    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDbAU7-PGwHzYtPIJYeEKbza8LUzqT4F3M",
-        authDomain: "jstutorial-c00dd.firebaseapp.com",
-        databaseURL: "https://jstutorial-c00dd.firebaseio.com",
-        projectId: "jstutorial-c00dd",
-        storageBucket: "",
-        messagingSenderId: "541618259692"
-      };
-      firebase.initializeApp(config);
-    </script>
+    <title>GreenLight</title>
 
     <!--jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -31,33 +13,18 @@
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Alike+Angular|Asul|Eczar" rel="stylesheet">
 
-
 </head>
 <body>
 
-    <!--Add your name-->
-    <h1>GreenLight</h1>
+     <h1>GreenLight</h1>
+        <p>Does your crush like you? Upload a txt file and see!</p>
+        <a href="/results"><button>Upload</button></a>
 
-    <!--Will be populated with messages-->
-    <div class="allMessages">
-        
-    </div>
-    
-    <!--For user to input messages-->
-    <div class="userContainer">
-        <form>
-            <div class="textContainer">
-                <div>
-                    <p>Your name:</p><input id="name" type="text">
-                </div>
-                <div>
-                    <p>Message:</p><input id="message" type="text">
-                </div>
-            </div>
-            <div class="GObutton">
-                <input type="reset" onclick="updateDB();" value="Submit/Update">
-            </div>
-        </form>
-    </div>
+        <div class="file-upload">
+                  <form method=post enctype=multipart/form-data>
+
+                  <input type="file" name=file>
+        </div>
 </body>
+
 </html>
