@@ -11,14 +11,13 @@
 <style>
 	
 	body {
-		background: url("success.jpg") ;
+		background: url("{{ url_for('static',filename='success.jpg') }}") ;
 		background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-blend-mode: lighten;
 	}
-
 	h1 {
     	text-align: center;
     	padding-top: 250px;
@@ -26,7 +25,7 @@
     	font-size: 48px;
     	color: #191970;
 	}
-
+	
 </style>
 
 <head>
@@ -36,7 +35,17 @@
 
 <body>
 
-<h1>We think your crush does like you!</h1>
-
+<script type = "text/javascript">
+	function check(){
+		if  ({{ sentiment_score|tojson }} > 0){
+			return 'We think your crush likes you!';
+		}
+		return 'Sorry, your crush isn\'t interested';
+	}
+	
+	document.write("<span class='blue'>" + check().fontsize(30) + "</span>");
+</script>
+<h3>The sentiment score is: {{ sentiment_score|tojson }}</h3>
+<h4>To start over, please refresh the page! <h4>
 </body>
 </html>
