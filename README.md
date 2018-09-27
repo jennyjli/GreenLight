@@ -18,7 +18,7 @@ We used flask, python, html and css to build the web application, and used Googl
 As freshmen, all of us were unfamiliar with web development, so we encountered many technical difficulties.
 
 ## __Accomplishments that we're proud of__
-We are glad that we are able to make a functional application, whiling learning new things on the way.
+We are glad that we are able to make a functional application, while learning new things on the way.
 
 ## __What we learned__
 We learned to develop a web application and use external APIs to process information. More importantly, we learned how to collaborate as team and work together to accomplish a goal.
